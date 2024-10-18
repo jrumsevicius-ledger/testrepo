@@ -10,5 +10,8 @@ jobs:
         run: |
           echo "Hello World!"
           echo "Test"
+          set +e
           ls -2
+          echo $?
+          set -e
           echo "Bye World!"
