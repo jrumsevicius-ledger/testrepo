@@ -12,6 +12,11 @@ jobs:
           echo "Test"
           set +e
           ls -2
-          echo $?
+          EXIT_CODE=$?
           set -e
+          if [[ EXIT_CODE == 0 ]]; then
+            echo "Exited successfuly"
+          else
+            echo "Failed with code $EXIT_CODE"
+          fi
           echo "Bye World!"
