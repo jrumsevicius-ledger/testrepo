@@ -14,7 +14,7 @@ jobs:
           ls -1
           EXIT_CODE=$?
           set -e
-          if [[ EXIT_CODE == 0 ]]; then
+          if [[ $EXIT_CODE == 0 ]]; then
             echo "Exited successfuly"
           else
             echo "Failed with code $EXIT_CODE"
